@@ -10,7 +10,15 @@ Dependencies:
 
 To install the necessary dependencies, run the following command in your terminal:
 pip install pandas numpy
+
+References
+----------
+Gabow, H. N., & Tarjan, R. E. (1988).
+A linear-time algorithm for finding a minimum spanning pseudoforest.
+Information Processing Letters, 27(5), 259–263.
+https://doi.org/10.1016/0020-0190(88)90089-0
 """
+
 import pandas as pd
 import numpy as np
 from collections import defaultdict
