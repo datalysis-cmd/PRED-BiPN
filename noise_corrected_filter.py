@@ -80,6 +80,14 @@ Notes:
 - Ensure the input file contains positive weights; zero-weight edges are automatically removed
 - Large networks may require adjusting the --limit or number of workers
 - Visualization generates a GEXF file and a PNG preview (if network is small)
+
+
+References
+----------
+Coscia, M., & Neffke, F. M. H. (2017).
+Network Backboning with Noisy Data.
+2017 IEEE 33rd International Conference on Data Engineering (ICDE), Cambridge, MA, USA.
+https://doi.org/10.1109/ICDE.2017.105
 """
 
 
