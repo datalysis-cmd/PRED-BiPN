@@ -1,6 +1,3 @@
-# =========================================
-# LARGE NETWORK DISPARITY FILTER
-# =========================================
 # Description:
 #   This script applies the Disparity Filter (Serrano et al., 2009) to a 
 #   weighted network to extract statistically significant edges. 
