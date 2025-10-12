@@ -1,3 +1,60 @@
+"""
+=========================================
+GENE COMMUNITY HYPERGRAPH VISUALIZATION
+=========================================
+
+Description:
+    This script reads a hypergraph file representing gene communities
+    and visualizes the largest communities in a circular layout. 
+    Each community is plotted as a colored circle, nodes are placed 
+    around the community center, and only some labels are shown to 
+    reduce clutter. Statistics of communities are printed as well.
+
+Input file format:
+    Tab-separated file with two columns:
+        Column 1: Source node (gene)
+        Column 2: Comma-separated list of target nodes (genes in the same hyperedge)
+    Example:
+        GeneA    GeneB,GeneC,GeneD
+        GeneE    GeneF,GeneG
+
+Output:
+    - A PNG image 'circular_communities.png' with the circular layout visualization
+    - Printed statistics about the number of communities and their sizes
+
+Required libraries:
+    pip install networkx matplotlib numpy
+
+    - networkx: for graph creation and community detection
+    - matplotlib: for plotting nodes, edges, and community circles
+    - numpy: for numeric operations, layout calculations
+
+How to run:
+    1. Save this script as 'visualize_gene_communities.py'
+    2. Make sure you have the input file (e.g., 'hypergraph_gene_edges.txt')
+    3. Run the script from the command line:
+        python visualize_gene_communities.py
+    4. The script will:
+        - Read the hypergraph data and construct a network
+        - Detect communities and select the largest ones
+        - Create a circular layout for visualization
+        - Draw nodes, edges, and community circles
+        - Print statistics about community sizes
+        - Save the figure as 'circular_communities.png'
+        - Display the figure interactively
+
+Notes:
+    - Only the 15 largest communities are visualized by default
+    - Node labels are randomly shown (~30%) to reduce clutter
+    - The visualization uses a circular layout for community centers
+    - You can adjust parameters like `max_communities` and label probability
+
+Example input:
+    Gene1    Gene2,Gene3,Gene4
+    Gene5    Gene6,Gene7
+    ...
+
+"""
 import networkx as nx
 import matplotlib.pyplot as plt
 import numpy as np
