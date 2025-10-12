@@ -1,5 +1,4 @@
 """
-
 Description:
     This script reads a tab-separated input file containing gene-disease associations
     and performs the following tasks:
@@ -46,6 +45,14 @@ How to run:
         python generate_one_mode_edges.py
     5. The script will process the file, generate mappings, create one-mode edges,
        and print execution times for each step.
+
+
+References
+----------
+Latapy, M., Magnien, C., & Del Vecchio, N. (2008).
+Basic notions for the analysis of large two-mode networks.
+Social Networks, 30(1), 31–48.
+https://doi.org/10.1016/j.socnet.2007.04.005
 """
 
 import pandas as pd
