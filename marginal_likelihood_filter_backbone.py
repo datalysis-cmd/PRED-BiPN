@@ -26,6 +26,13 @@ How it works:
     significantly speeding up the process for large networks.
 6.  **Sparse Matrix Output:** The filtered graph is optionally saved as a sparse matrix for memory efficiency.
 7.  **Test Mode:** Includes a test mode to process only a subset of the data for quick debugging and testing.
+
+References
+----------
+Dianati, N. (2016).
+Unwinding the hairball graph: Pruning algorithms for weighted complex networks.
+Physical Review E, 93, 012304.
+https://doi.org/10.1103/PhysRevE.93.012304
 """
 
 
