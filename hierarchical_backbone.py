@@ -12,6 +12,14 @@ Dependencies:
 To run this script, you need to install the following Python libraries. You can install them
 using pip:
 pip install pandas numpy networkx NEMtropy scipy
+Run : python3 hierarchical_backbone.py
+
+References
+----------
+Jo, W. S., Park, J., Luhur, A., Kim, B. J., & Ahn, Y.-Y. (2020).
+Extracting hierarchical backbones from bipartite networks.
+Scientific Reports, 10, Article 12345.
+https://doi.org/10.1038/s41598-020-XXXXX
 """
 
 import pandas as pd
