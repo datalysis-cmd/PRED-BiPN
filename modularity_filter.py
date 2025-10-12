@@ -36,7 +36,11 @@ To run the script, you execute it from the command line, providing the path to y
 Example with optional arguments:
 `python your_script_name.py my_graph.tsv my_backbone.tsv --percentage 0.1 --max_lines 100000`
 
----
+References
+----------
+Rajeh, S., Savonnet, M., Leclercq, E., & Cherif, H. (2022).
+Modularity-Based Backbone Extraction in Weighted Complex Networks.
+In Network Science: 7th International Winter Conference, NetSci-X 2022, Porto, Portugal, February 8-11, 2022, Proceedings, 67–79. Springer.
 """
 import networkx as nx
 import time
