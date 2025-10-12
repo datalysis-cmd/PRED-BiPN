@@ -5,6 +5,17 @@ This script requires the following Python libraries:
 -psutil: For monitoring system resource usage, such as memory.
 You can install these dependencies using `pip`:
 -bash : pip install pandas psutil
+
+How to run: python3 simple_weighted_projection.py
+
+
+References
+----------
+Newman, M. E. J. (2001).
+Scientific collaboration networks. II. Shortest paths, weighted networks, and centrality.
+Physical Review E, 64, 016132.
+https://doi.org/10.1103/PhysRevE.64.016132
+
 """
 
 import pandas as pd
