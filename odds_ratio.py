@@ -18,6 +18,19 @@ You can do this using pip in your bash terminal:
 pip install pandas
 pip install numpy
 pip install scipy
+
+References
+----------
+
+Hattori, S., & Yanagawa, T. (200X).
+Mantel-Haenszel estimators for irregular sparse K2 × J tables.
+Biostatistics Center, Kurume University, Japan.
+[Include DOI or URL if available]
+
+Chung, Y., Lee, S. Y., Elston, R. C., & Park, T. (2006).
+Odds ratio based multifactor-dimensionality reduction method for detecting gene–gene interactions.
+Genetic Epidemiology, 30(8), 655–665.
+https://doi.org/10.1002/gepi.20134
 """
 import pandas as pd
 import numpy as np
