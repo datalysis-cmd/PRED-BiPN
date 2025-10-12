@@ -70,6 +70,14 @@ Notes:
 - Memory usage is monitored; if MAX_MEMORY is exceeded, reduce CHUNK_SIZE
 - The script automatically ensures the adjacency matrix is symmetric
 - Parallel processing significantly speeds up normalization and backbone extraction
+
+References
+----------
+Foti, N. J., Hughes, J. M., & Rockmore, D. N. (2011).
+Nonparametric sparsification of complex multiscale networks.
+PLoS ONE, 6, e16431.
+https://doi.org/10.1371/journal.pone.0016431
+
 """
 
 import pandas as pd
