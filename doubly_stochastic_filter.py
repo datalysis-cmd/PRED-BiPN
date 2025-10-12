@@ -35,7 +35,15 @@ Usage:
    - 'full': keep all edges passing significance
 
 4. The result is a NetworkX DiGraph and saved weighted edge list.
+
+References
+----------
+Slater, P. B. (2009).
+A two-stage algorithm for extracting the multiscale backbone of complex weighted networks.
+Proceedings of the National Academy of Sciences, 106, E66–E66.
+https://doi.org/10.1073/pnas.0904725106
 """
+
 import numpy as np
 import pandas as pd
 import networkx as nx
