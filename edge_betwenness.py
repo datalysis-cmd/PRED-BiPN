@@ -37,7 +37,15 @@ Output Files:
     - network_detailed.png → interactive network visualization
     - network_simple.png → simplified network visualization
     - modularity_optimized_1000.png → modularity evolution plot
+    
+References
+----------
+Girvan, M., & Newman, M. E. J. (2002).
+Community structure in social and biological networks.
+Proceedings of the National Academy of Sciences, 99, 7821–7826.
+https://doi.org/10.1073/pnas.122653799
 """
+
 
 import networkx as nx
 from collections import defaultdict, deque
