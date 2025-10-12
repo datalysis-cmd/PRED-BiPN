@@ -1,19 +1,37 @@
-# Description:
-#   This script applies the Disparity Filter (Serrano et al., 2009) to a 
-#   weighted network to extract statistically significant edges. 
-#   It can handle very large networks by processing the data in chunks.
-# 
-# Input file format:
-#   Tab-separated file with three columns:
-#     Node1    Node2    Weight
-# 
-# Output file:
-#   CSV file with filtered edges and alpha values:
-#     Source,Target,Weight,Alpha
-# 
-# Required libraries:
-#   pip install pandas scipy tqdm psutil
-# =========================================
+"""
+Description:
+    This script applies the Disparity Filter (Serrano et al., 2009) to a 
+    weighted network to extract statistically significant edges. 
+    It can handle very large networks by processing the data in chunks.
+
+Input file format:
+    Tab-separated file with three columns:
+        Node1    Node2    Weight
+
+Output file:
+    CSV file with filtered edges and alpha values:
+        Source,Target,Weight,Alpha
+
+Required libraries:
+    pip install pandas scipy tqdm psutil
+
+How to run:
+    1. Save this script as disparity_filter.py
+    2. Run it from the command line:
+        python disparity_filter.py
+    3. Follow the prompts:
+        - Enter input filename (e.g., network.tsv)
+        - Enter output filename (e.g., filtered_network.csv)
+        - Enter chunksize (recommended: 100000)
+    4. The script will:
+        a) Calculate node strength and degree
+        b) Apply disparity filter to edges
+        c) Save significant edges to output CSV
+
+Notes:
+    - Memory usage is monitored; reduce chunksize if memory usage is high.
+    - Alpha threshold can be changed by passing alpha to DisparityFilter.
+"""
 
 import pandas as pd
 from scipy.stats import beta
