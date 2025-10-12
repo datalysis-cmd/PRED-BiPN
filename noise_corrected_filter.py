@@ -1,26 +1,87 @@
-#!/usr/bin/env python3
 """
-Improved and fixed script for Noise-Corrected backbone extraction
-for gene-disease one-mode networks.
+===========================================================
+Noise-Corrected (NC) Backbone Extraction for Weighted Networks
+===========================================================
 
-Major fixes & improvements:
-- Numerical stability: use float64 for numeric calculations
-- Corrected marginal variance using Beta-Binomial predictive variance
-- Robust delta-method for V(L~) with eps guards
-- Improved z-score calculation and two-sided default test (configurable)
-- Safer handling of zero / tiny denominators
-- Useful debug/logging outputs about problematic rows
-- Prints correct p-value for z (using normal survival function)
-- Minor performance/memory improvements + GC hints
+Description:
+------------
+This script extracts a statistically significant backbone from 
+weighted bipartite or gene-disease networks using the Noise-Corrected 
+(NC) method based on the Delta method and Beta-Binomial modeling. 
+It calculates per-edge statistics including expected weight, 
+normalized weight (L_ij, L_tilde), posterior probability, variance, 
+z-scores, and significance flags.
 
-Usage examples:
-  python noise_corrected_backbone_fixed.py --limit 50000 --output filtered_edges.tsv
-  python noise_corrected_backbone_fixed.py --strict --delta 3.09 --zthresh 4.0
+The script supports both standard and strict filtering, parallel 
+processing for large datasets, and visualization/export of the 
+backbone network.
 
-Dependencies:
-  pandas, numpy, scipy, networkx, matplotlib, tqdm
+Input:
+------
+- Tab-separated file with at least three columns:
+    Gene1    Gene2    Shared_Diseases
+- Gene1 and Gene2: node identifiers
+- Shared_Diseases: weight of the edge between the nodes (numeric)
 
+Output:
+-------
+1. filtered_edges.tsv
+    - Contains filtered edges with detailed statistics
+2. backbone_network.gexf
+    - Gephi-compatible network including node/edge attributes
+3. network_preview.png
+    - Optional visualization preview for small networks
+
+Features:
+---------
+- Numerically stable per-edge calculations (E_ij, L_ij, L_tilde, z_score)
+- Delta-method variance estimation
+- Beta-Binomial modeling of edge probabilities
+- Standard and strict backbone filtering (z-score, node degree)
+- Parallel processing using multiprocessing
+- Automatic memory management for large datasets
+- Safe visualization for small and medium networks
+
+Required Dependencies:
+----------------------
+- pandas      : Data handling
+- numpy       : Numerical operations
+- scipy       : Statistical functions (beta, norm)
+- networkx    : Network analysis and visualization
+- matplotlib  : Optional network visualization
+- tqdm        : Progress bars
+- multiprocessing, gc, warnings, argparse, datetime : Standard libraries
+
+Install dependencies using pip:
+--------------------------------
+pip install pandas numpy scipy networkx matplotlib tqdm
+
+Usage:
+------
+1. Save this script as 'noise_corrected_backbone.py'
+2. Place your input TSV file in the working directory
+3. Run from the command line with optional parameters:
+   python noise_corrected_backbone.py --input weighted_disease_edges_one_mode.tsv --output filtered_edges.tsv
+
+Optional Arguments:
+------------------
+--strict           : Apply strict backbone filtering
+--delta            : Delta threshold (z-score)
+--zthresh          : Z-score threshold for strict filtering
+--percentile       : Node degree percentile for strict filtering
+--output           : Output TSV filename
+--limit            : Maximum number of input rows processed
+--alpha            : Alpha prior for Beta distribution
+--one-sided        : One-sided z-test (positive L_tilde only)
+--workers          : Number of parallel worker processes
+
+Notes:
+------
+- Ensure the input file contains positive weights; zero-weight edges are automatically removed
+- Large networks may require adjusting the --limit or number of workers
+- Visualization generates a GEXF file and a PNG preview (if network is small)
 """
+
 
 import argparse
 import datetime
