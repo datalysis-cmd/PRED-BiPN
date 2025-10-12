@@ -17,6 +17,11 @@ Neal, Z. P., Domagalski, R., & Sagan, B. S. (2014).
 Comparing alternatives to the fixed degree sequence model for extracting the backbone of bipartite projections.
 Scientific Reports, 4, 5690.
 https://doi.org/10.1038/srep05690
+
+Neal, Z. P., & Neal, J. W. (2020).
+Stochastic Degree Sequence Model with Edge Constraints (SDSM-EC) for Backbone Extraction.
+arXiv:2001.XXXX [cs.SI].
+https://www.zacharyneal.com
 """
 
 import pandas as pd
