@@ -1,8 +1,4 @@
 """
-===========================================================
-LANS BACKBONE EXTRACTION SCRIPT (Locally Adaptive Network Sparsification)
-===========================================================
-
 Description:
 ------------
 This script implements the LANS method for extracting the backbone 
