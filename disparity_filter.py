@@ -31,6 +31,13 @@ How to run:
 Notes:
     - Memory usage is monitored; reduce chunksize if memory usage is high.
     - Alpha threshold can be changed by passing alpha to DisparityFilter.
+    
+References
+----------
+Serrano, M. Á., Boguñá, M., & Vespignani, A. (2009).
+Extracting the multiscale backbone of complex weighted networks.
+Proceedings of the National Academy of Sciences, 106(16), 6483–6488.
+https://doi.org/10.1073/pnas.0808904106
 """
 
 import pandas as pd
