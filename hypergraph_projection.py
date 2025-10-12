@@ -53,8 +53,15 @@ Example input:
     Gene1    Gene2,Gene3,Gene4
     Gene5    Gene6,Gene7
     ...
-
+    
+References
+----------
+Young, J.-G., Petri, G., & Peixoto, T. P. (2023).
+Hypergraph reconstruction from network data.
+Communications Physics, 6, 226.
+https://doi.org/10.1038/s42005-023-01164-7
 """
+
 import networkx as nx
 import matplotlib.pyplot as plt
 import numpy as np
