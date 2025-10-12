@@ -1,7 +1,4 @@
 """
-===========================================================
-GENE-DISEASE MAPPING AND ONE-MODE EDGE GENERATION SCRIPT
-===========================================================
 
 Description:
     This script reads a tab-separated input file containing gene-disease associations
