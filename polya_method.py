@@ -52,6 +52,14 @@ Notes
   the behavior similar to certain disparity-like filters).
 - For undirected networks the number of tests is treated as 2 * M (L = 2M).
 - The implementation aims to be robust to numeric instabilities.
+
+
+References
+----------
+Marcaccioli, R., & Livan, G. (2019).
+A Pólya urn approach to information filtering in complex networks.
+Nature Communications, 10, Article 745.
+https://doi.org/10.1038/s41467-019-08616-7
 """
 
 import numpy as np
