@@ -25,7 +25,15 @@
  - functools.partial: To create new functions with some arguments pre-filled, useful for passing fixed network object to parallel tasks.
  - sys: Provides access to system-specific parameters and functions, used for printing error messages to stderr.
  - tqdm: For displaying a progress bar, useful for visualizing the progress of lengthy computations.
+ 
+ References
+ ----------
+    Grady, D., Tiemann, C., & Brockmann, D. (2012).
+    Robust classification of salient links in complex networks.
+    Nature Communications, 3, 864.
+    https://doi.org/10.1038/ncomms1847
 """
+
 import pandas as pd
 from collections import defaultdict, Counter
 import heapq
