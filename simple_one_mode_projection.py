@@ -1,10 +1,54 @@
 """
-Dependencies
-This script requires the following Python libraries:
--pandas : For efficient data manipulation, especially when handling large datasets and reading files in chunks.
--psutil: For monitoring system resource usage, such as memory.
-You can install these dependencies using `pip`:
--bash : pip install pandas psutil
+===========================================================
+GENE-DISEASE MAPPING AND ONE-MODE EDGE GENERATION SCRIPT
+===========================================================
+
+Description:
+    This script reads a tab-separated input file containing gene-disease associations
+    and performs the following tasks:
+    
+    1. Reads the data in chunks to efficiently handle large files.
+    2. Generates two mappings:
+        - gene_to_diseases.tsv: for each gene, lists all associated diseases
+        - disease_to_genes.tsv: for each disease, lists all associated genes
+    3. Generates one-mode projections (edges without weights):
+        - gene_edges_one_mode.tsv: edges between genes sharing at least one disease
+        - disease_edges_one_mode.tsv: edges between diseases sharing at least one gene
+    4. Monitors memory usage during processing to avoid overloading the system
+    5. Prints timing statistics for each processing step
+
+Input file format:
+    - Tab-separated with two columns (header optional):
+        Column 1: Disease/Phenotype
+        Column 2: Gene
+    Example:
+        Disease1    GeneA
+        Disease1    GeneB
+        Disease2    GeneB
+
+Output files:
+    - gene_to_all_diseases.tsv
+    - disease_to_all_genes.tsv
+    - gene_edges_one_mode.tsv
+    - disease_edges_one_mode.tsv
+
+Dependencies:
+    - pandas  : For efficient data manipulation and reading large files in chunks
+    - psutil  : For monitoring system memory usage
+    You can install them using pip:
+        pip install pandas psutil
+
+How to run:
+    1. Save this script as 'generate_one_mode_edges.py'
+    2. Make sure your input file is in the same folder (or provide full path)
+    3. Adjust the following variables if needed:
+        - input_file: path to your input TSV
+        - gene_output_file, disease_output_file, gene_edges_file, disease_edges_file
+        - CHUNK_SIZE: number of rows per chunk for processing
+    4. Run the script from command line:
+        python generate_one_mode_edges.py
+    5. The script will process the file, generate mappings, create one-mode edges,
+       and print execution times for each step.
 """
 
 import pandas as pd
