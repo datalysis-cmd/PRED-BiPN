@@ -10,7 +10,15 @@ To run this code, you'll need the following Python libraries:
 You can install these dependencies using pip, the Python package installer. Open your terminal or command prompt and run the following command:
 
 Bash: pip install pandas numpy scipy
+
+References
+----------
+Neal, Z. P., Domagalski, R., & Sagan, B. S. (2014).
+Comparing alternatives to the fixed degree sequence model for extracting the backbone of bipartite projections.
+Scientific Reports, 4, 5690.
+https://doi.org/10.1038/srep05690
 """
+
 import pandas as pd
 import numpy as np
 import time
