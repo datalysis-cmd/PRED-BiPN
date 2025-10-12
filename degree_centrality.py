@@ -26,6 +26,15 @@ How to run:
 Outputs:
 - weighted_degree_centrality_test.csv: contains Node, Weighted_Degree, Normalised_Weighted_Degree
   plus explanatory comments at the end of the file.
+
+Reference:
+----------
+Zakariya Ghalmane, Chantal Cherif, Hocine Cherif & Mohammed El Hassouni,
+"Extracting backbones in weighted modular complex networks",
+Scientific Reports, (Year).
+This paper inspired the approach used here for community detection
+and edge-betweenness-based backbone extraction in weighted networks.
+
 """
 
 import pandas as pd
